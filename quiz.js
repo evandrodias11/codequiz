@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   
     restartButton.addEventListener('click', () => {
-        window.location.href = 'index.html';
+        window.location.href = 'cadastro.html';
     });
   
     // 🚀 Começar carregando as perguntas
