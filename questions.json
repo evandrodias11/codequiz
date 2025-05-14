@@ -1,112 +1,110 @@
 [
-    {
-      "question": "O que é programação?",
-      "answers": [
-        "Criar histórias para livros",
-        "Resolver problemas usando código",
-        "Escrever textos em Word",
-        "Desenhar imagens no computador"
-      ],
-      "correct": 1,
-      "explanation": "Programação é a arte de resolver problemas usando lógica e código."
-    },
-    {
-      "question": "Para que serve uma variável em um programa?",
-      "answers": [
-        "Para armazenar dados",
-        "Para apagar arquivos",
-        "Para imprimir documentos",
-        "Para fechar o programa"
-      ],
-      "correct": 0,
-      "explanation": "Variáveis armazenam informações como nomes, números e muito mais."
-    },
-    {
-      "question": "Qual destes é um tipo de dado usado em programação?",
-      "answers": [
-        "Telefone",
-        "Texto",
-        "Cadeira",
-        "Foto"
-      ],
-      "correct": 1,
-      "explanation": "Tipos comuns incluem texto, números e booleanos."
-    },
-    {
-      "question": "O que é uma estrutura condicional (if/else)?",
-      "answers": [
-        "Uma ferramenta para decorar sites",
-        "Um erro no código",
-        "Uma forma de tomar decisões no código",
-        "Uma maneira de apagar variáveis"
-      ],
-      "correct": 2,
-      "explanation": "Condições são usadas para fazer escolhas no fluxo do programa."
-    },
-    {
-      "question": "O que faz um loop (por exemplo, um 'for')?",
-      "answers": [
-        "Cria novas janelas",
-        "Repete um bloco de código várias vezes",
-        "Fecha o navegador",
-        "Desenha gráficos"
-      ],
-      "correct": 1,
-      "explanation": "Loops repetem comandos até uma condição ser satisfeita."
-    },
-    {
-      "question": "Qual a principal diferença entre '==' e '===' em JavaScript?",
-      "answers": [
-        "'===' compara valor e tipo, '==' compara apenas valor",
-        "Não há diferença",
-        "'==' é usado apenas para texto",
-        "'===' ignora o tipo dos dados"
-      ],
-      "correct": 0,
-      "explanation": "'===' exige que tanto o valor quanto o tipo sejam iguais."
-    },
-    {
-      "question": "Qual estrutura pode armazenar vários valores em uma variável?",
-      "answers": [
-        "Função",
-        "Array",
-        "Condição",
-        "Laço"
-      ],
-      "correct": 1,
-      "explanation": "Um array pode armazenar vários valores juntos."
-    },
-    {
-      "question": "O que é uma função em programação?",
-      "answers": [
-        "Uma sequência de instruções que executa uma tarefa",
-        "Um erro no navegador",
-        "Um tipo de variável",
-        "Um comando para fechar o programa"
-      ],
-      "correct": 0,
-      "explanation": "Funções agrupam códigos reutilizáveis em blocos."
-    },
-    {
-      "question": "Qual palavra-chave usamos para testar uma condição?",
-      "answers": [
-        "loop",
-        "if",
-        "else",
-        "return"
-      ],
-      "correct": 1,
-      "explanation": "'if' é usado para checar condições no código."
-    },
-    {
-      "question": "O que é um erro de sintaxe em programação?",
-      "answers": [
-        "Erro ao digitar o código de forma errada",
-        "Erro quando falta energia",
-        "Erro no computador",
-        "Erro no download de arquivos"
-      ],
-      "correct": 0,
-      "explanation": "Erro de sintaxe ocorre quando o código não segue a estrutura correta da linguagem."
-    }
-  ]  
+  {
+    "nivel": 1,
+    "question": "Você quer preparar um café da manhã. Qual o primeiro passo?",
+    "answers": [
+      "Comer o pão",
+      "Torrar o pão antes de comprá-lo",
+      "Comprar os ingredientes",
+      "Jogar tudo fora"
+    ],
+    "correct": 2,
+    "explanation": "Antes de fazer qualquer tarefa, é importante planejar e preparar os recursos. Programar também começa com planejamento."
+  },
+  {
+    "nivel": 1,
+    "question": "Se está chovendo, você usa guarda-chuva. Esse tipo de decisão é como...",
+    "answers": [
+      "Um botão",
+      "Um comando",
+      "Uma condição (if)",
+      "Um laço"
+    ],
+    "correct": 2,
+    "explanation": "Na programação, usamos condições (if) para tomar decisões, como: se chover, use guarda-chuva."
+  },
+  {
+    "nivel": 1,
+    "question": "Você quer repetir uma tarefa 5 vezes. Qual exemplo se parece com isso?",
+    "answers": [
+      "Colocar a mesma música várias vezes na playlist",
+      "Comprar 5 pães diferentes",
+      "Cantar uma música e depois dançar",
+      "Pular etapas de uma receita"
+    ],
+    "correct": 0,
+    "explanation": "Repetição de tarefas é como colocar a mesma música para tocar várias vezes — em programação isso é um loop."
+  },
+  {
+    "nivel": 2,
+    "question": "Se uma variável fosse um objeto da vida real, ela seria...",
+    "answers": [
+      "Uma xícara com algo dentro",
+      "Um botão de desligar",
+      "Um ventilador",
+      "Um som de campainha"
+    ],
+    "correct": 0,
+    "explanation": "Uma variável armazena informações, como uma xícara guarda o conteúdo dentro dela."
+  },
+  {
+    "nivel": 2,
+    "question": "Você tem um caderno onde escreve tarefas. Em programação, isso lembra...",
+    "answers": [
+      "Uma função",
+      "Uma variável",
+      "Um comentário",
+      "Um arquivo"
+    ],
+    "correct": 3,
+    "explanation": "Arquivos guardam informações, como um caderno guarda suas tarefas escritas."
+  },
+  {
+    "nivel": 2,
+    "question": "Qual destas ações mais se parece com uma função?",
+    "answers": [
+      "Lavar as mãos sempre do mesmo jeito",
+      "Abrir um pote e comer",
+      "Colocar roupas em lugares diferentes",
+      "Esquecer o que fez"
+    ],
+    "correct": 0,
+    "explanation": "Funções são sequências de passos que fazemos sempre da mesma forma, como lavar as mãos."
+  },
+  {
+    "nivel": 3,
+    "question": "Qual dessas opções representa melhor um 'loop' em programação?",
+    "answers": [
+      "Fazer um pedido no restaurante",
+      "Repetir um exercício 10 vezes",
+      "Escolher entre pizza ou hambúrguer",
+      "Ler um livro"
+    ],
+    "correct": 1,
+    "explanation": "Loops servem para repetir ações — como repetir exercícios físicos ou tarefas."
+  },
+  {
+    "nivel": 3,
+    "question": "Em programação, uma 'condição' serve para...",
+    "answers": [
+      "Escolher entre dois caminhos",
+      "Salvar dados automaticamente",
+      "Apagar tudo do código",
+      "Repetir várias vezes"
+    ],
+    "correct": 0,
+    "explanation": "Condições ajudam o programa a decidir o que fazer com base em uma situação, como 'se chover, leve guarda-chuva'."
+  },
+  {
+    "nivel": 3,
+    "question": "Qual dessas frases representa melhor o que um programa faz?",
+    "answers": [
+      "Seguir uma receita passo a passo",
+      "Comprar ingredientes sem receita",
+      "Ficar parado olhando",
+      "Inventar uma comida do nada"
+    ],
+    "correct": 0,
+    "explanation": "Um programa é como uma receita: executa instruções em ordem para alcançar um objetivo."
+  }
+]

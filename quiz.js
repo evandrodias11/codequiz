@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     answersEl.after(feedbackCard);
 
     function showQuestion() {
+      document.getElementById('progresso').textContent = `Pergunta ${currentQuestionIndex + 1} de ${questions.length}`;
       const currentQuestion = questions[currentQuestionIndex];
 
       questionEl.textContent = currentQuestion.question;
@@ -87,9 +88,29 @@ document.addEventListener('DOMContentLoaded', async () => {
       answersEl.classList.add('hidden');
       nextButton.classList.add('hidden');
       feedbackCard.classList.add('hidden');
+      document.getElementById('progresso').classList.add('hidden');
+      document.querySelector('h1')?.classList.add('hidden');
 
       resultEl.classList.remove('hidden');
-      resultEl.textContent = `🎉 Você acertou ${score} de ${questions.length} perguntas!`;
+
+      const total = questions.length;
+      const percentual = (score / total) * 100;
+      let mensagem = '';
+
+      if (percentual === 100) {
+        mensagem = 'Incrível! Você acertou todas as perguntas! Obrigado por responder o quiz!';
+      } else if (percentual >= 70) {
+        mensagem = 'Muito bom! Você foi muito bem! Obrigado por responder o quiz!';
+      } else if (percentual >= 40) {
+        mensagem = 'Bom esforço! Obrigado por responder o quiz!';
+      } else {
+        mensagem = 'Obrigado por responder o quiz!';
+      }
+
+      resultEl.innerHTML = `
+        <p class="text-2xl text-blue-600 font-bold mb-4">🎉 Você acertou ${score} de ${total} perguntas!</p>
+        <p class="text-lg text-gray-700">${mensagem}</p>
+      `;
 
       restartButton.classList.remove('hidden');
 
