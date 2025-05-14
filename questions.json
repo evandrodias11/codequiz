@@ -1,0 +1,112 @@
+[
+    {
+      "question": "O que é programação?",
+      "answers": [
+        "Criar histórias para livros",
+        "Resolver problemas usando código",
+        "Escrever textos em Word",
+        "Desenhar imagens no computador"
+      ],
+      "correct": 1,
+      "explanation": "Programação é a arte de resolver problemas usando lógica e código."
+    },
+    {
+      "question": "Para que serve uma variável em um programa?",
+      "answers": [
+        "Para armazenar dados",
+        "Para apagar arquivos",
+        "Para imprimir documentos",
+        "Para fechar o programa"
+      ],
+      "correct": 0,
+      "explanation": "Variáveis armazenam informações como nomes, números e muito mais."
+    },
+    {
+      "question": "Qual destes é um tipo de dado usado em programação?",
+      "answers": [
+        "Telefone",
+        "Texto",
+        "Cadeira",
+        "Foto"
+      ],
+      "correct": 1,
+      "explanation": "Tipos comuns incluem texto, números e booleanos."
+    },
+    {
+      "question": "O que é uma estrutura condicional (if/else)?",
+      "answers": [
+        "Uma ferramenta para decorar sites",
+        "Um erro no código",
+        "Uma forma de tomar decisões no código",
+        "Uma maneira de apagar variáveis"
+      ],
+      "correct": 2,
+      "explanation": "Condições são usadas para fazer escolhas no fluxo do programa."
+    },
+    {
+      "question": "O que faz um loop (por exemplo, um 'for')?",
+      "answers": [
+        "Cria novas janelas",
+        "Repete um bloco de código várias vezes",
+        "Fecha o navegador",
+        "Desenha gráficos"
+      ],
+      "correct": 1,
+      "explanation": "Loops repetem comandos até uma condição ser satisfeita."
+    },
+    {
+      "question": "Qual a principal diferença entre '==' e '===' em JavaScript?",
+      "answers": [
+        "'===' compara valor e tipo, '==' compara apenas valor",
+        "Não há diferença",
+        "'==' é usado apenas para texto",
+        "'===' ignora o tipo dos dados"
+      ],
+      "correct": 0,
+      "explanation": "'===' exige que tanto o valor quanto o tipo sejam iguais."
+    },
+    {
+      "question": "Qual estrutura pode armazenar vários valores em uma variável?",
+      "answers": [
+        "Função",
+        "Array",
+        "Condição",
+        "Laço"
+      ],
+      "correct": 1,
+      "explanation": "Um array pode armazenar vários valores juntos."
+    },
+    {
+      "question": "O que é uma função em programação?",
+      "answers": [
+        "Uma sequência de instruções que executa uma tarefa",
+        "Um erro no navegador",
+        "Um tipo de variável",
+        "Um comando para fechar o programa"
+      ],
+      "correct": 0,
+      "explanation": "Funções agrupam códigos reutilizáveis em blocos."
+    },
+    {
+      "question": "Qual palavra-chave usamos para testar uma condição?",
+      "answers": [
+        "loop",
+        "if",
+        "else",
+        "return"
+      ],
+      "correct": 1,
+      "explanation": "'if' é usado para checar condições no código."
+    },
+    {
+      "question": "O que é um erro de sintaxe em programação?",
+      "answers": [
+        "Erro ao digitar o código de forma errada",
+        "Erro quando falta energia",
+        "Erro no computador",
+        "Erro no download de arquivos"
+      ],
+      "correct": 0,
+      "explanation": "Erro de sintaxe ocorre quando o código não segue a estrutura correta da linguagem."
+    }
+  ]  

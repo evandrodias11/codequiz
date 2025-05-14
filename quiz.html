@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeQuiz - Jogo</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6">
+
+  <div id="quiz-container" class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-xl text-center">
+    <h1 class="text-2xl font-bold mb-6 text-blue-600">CodeQuiz: Vamos jogar!</h1>
+
+    <div id="question" class="text-lg font-semibold mb-6"></div>
+
+    <div id="answers" class="grid gap-4"></div>
+
+    <button id="next-button" class="mt-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hidden">
+      Próxima Pergunta
+    </button>
+
+    <div id="result" class="text-lg font-semibold mt-6 hidden"></div>
+    <button id="restart-button" class="mt-4 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg hidden">
+        Jogar Novamente
+    </button>      
+  </div>
+
+  <script src="quiz.js"></script>
+
+</body>
+</html>
