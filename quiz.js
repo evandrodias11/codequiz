@@ -110,6 +110,44 @@ document.addEventListener('DOMContentLoaded', async () => {
         <p class="text-lg text-gray-700">${mensagem}</p>
       `;
 
+      // Mostrar explicações extras
+      const explicacoesEl = document.getElementById('explicacoes');
+      explicacoesEl.classList.remove('hidden');
+      explicacoesEl.innerHTML = `
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">📚 Revisão das Perguntas</h2>
+        <div class="space-y-4">
+          ${questions.map((q, index) => `
+            <div class="p-4 bg-gray-100 rounded-xl shadow">
+              <p class="font-semibold text-gray-700 mb-1">Pergunta ${index + 1}: ${q.question}</p>
+              <p class="text-green-600"><strong>✔ Resposta Correta:</strong> ${q.answers[q.correct]}</p>
+              <p class="text-gray-600 mt-1">${q.explanation}</p>
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      // Recursos extras
+      const linksExtras = `
+        <div class="mt-8">
+          <h2 class="text-xl font-semibold mb-4 text-gray-800">🌐 Quer aprender mais?</h2>
+          <ul class="space-y-2">
+            <li>
+              <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" target="_blank"
+                class="text-blue-600 hover:underline font-medium transition-colors">
+                ▶ Curso de Lógica de Programação (Gustavo Guanabara)
+              </a>
+            </li>
+            <li>
+              <a href="https://scratch.mit.edu/" target="_blank"
+                class="text-blue-600 hover:underline font-medium transition-colors">
+                🐱 Programação Visual com Scratch
+              </a>
+            </li>
+          </ul>
+        </div>
+      `;
+      explicacoesEl.innerHTML += linksExtras;
+
       restartButton.classList.remove('hidden');
 
       await salvarResultado();
