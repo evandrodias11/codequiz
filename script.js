@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       validarFormulario();
     });
     cpfInput.addEventListener('input', () => {
-      const raw = cpfInput.value.replace(/\D/g, ''); // remove tudo que não for número
+      const raw = cpfInput.value.replace(/\D/g, '');
 
       let masked = '';
       if (raw.length <= 3) {
@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
       
           const assinaturaUrl = `${supabaseUrl}/storage/v1/object/public/assinaturas/${fileName}`;
       
-          // AQUI: inserindo e já retornando o ID do participante
           const { data, error: insertError } = await supabaseClient.from('participantes')
             .insert({ nome, cpf, assinatura_url: assinaturaUrl })
             .select()
@@ -97,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
           }
       
-          // Salva o ID no navegador
           localStorage.setItem('id_participante', data.id);
           localStorage.setItem('nome_participante', nome);
       

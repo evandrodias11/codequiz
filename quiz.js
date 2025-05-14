@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const resultEl = document.getElementById('result');
     const restartButton = document.getElementById('restart-button');
 
-    // Novo: elemento do card de feedback
     const feedbackCard = document.createElement('div');
     feedbackCard.id = 'feedback-card';
     feedbackCard.className = 'mt-4 p-4 rounded-xl shadow-md text-white hidden';
@@ -66,7 +65,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       nextButton.classList.remove('hidden');
 
-      // Desabilita os botões após a resposta
       Array.from(answersEl.children).forEach(button => {
         button.disabled = true;
         button.classList.add('opacity-50');
@@ -145,7 +143,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         window.location.href = 'cadastro.html';
     });
   
-    // 🚀 Começar carregando as perguntas
     await carregarQuestoes();
   
   });  
