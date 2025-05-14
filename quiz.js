@@ -22,13 +22,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     const nextButton = document.getElementById('next-button');
     const resultEl = document.getElementById('result');
     const restartButton = document.getElementById('restart-button');
-  
+
+    // Novo: elemento do card de feedback
+    const feedbackCard = document.createElement('div');
+    feedbackCard.id = 'feedback-card';
+    feedbackCard.className = 'mt-4 p-4 rounded-xl shadow-md text-white hidden';
+    answersEl.after(feedbackCard);
+
     function showQuestion() {
       const currentQuestion = questions[currentQuestionIndex];
-  
+
       questionEl.textContent = currentQuestion.question;
       answersEl.innerHTML = '';
-  
+      feedbackCard.classList.add('hidden');
+      feedbackCard.innerHTML = '';
+
       currentQuestion.answers.forEach((answer, index) => {
         const button = document.createElement('button');
         button.textContent = answer;
@@ -36,23 +44,28 @@ document.addEventListener('DOMContentLoaded', async () => {
         button.onclick = () => selectAnswer(index);
         answersEl.appendChild(button);
       });
-  
+
       nextButton.classList.add('hidden');
     }
-  
+
     function selectAnswer(selectedIndex) {
       const currentQuestion = questions[currentQuestionIndex];
-  
-      if (selectedIndex === currentQuestion.correct) {
-        score++;
-        alert('✅ Correto!\n\n' + currentQuestion.explanation);
-      } else {
-        alert('❌ Incorreto.\n\n' + currentQuestion.explanation);
-      }
-  
+
+      const isCorrect = selectedIndex === currentQuestion.correct;
+      if (isCorrect) score++;
+
+      feedbackCard.classList.remove('hidden');
+      feedbackCard.className = `mt-4 p-4 rounded-xl shadow-md text-white ${
+        isCorrect ? 'bg-green-500' : 'bg-red-500'
+      }`;
+      feedbackCard.innerHTML = `
+        <p class="font-bold text-lg">${isCorrect ? '✅ Resposta Correta!' : '❌ Resposta Incorreta.'}</p>
+        <p class="mt-2">${currentQuestion.explanation}</p>
+      `;
+
       nextButton.classList.remove('hidden');
-  
-      // Desabilitar os botões depois de responder
+
+      // Desabilita os botões após a resposta
       Array.from(answersEl.children).forEach(button => {
         button.disabled = true;
         button.classList.add('opacity-50');
@@ -73,17 +86,19 @@ document.addEventListener('DOMContentLoaded', async () => {
       questionEl.classList.add('hidden');
       answersEl.classList.add('hidden');
       nextButton.classList.add('hidden');
-  
+      feedbackCard.classList.add('hidden');
+
       resultEl.classList.remove('hidden');
       resultEl.textContent = `🎉 Você acertou ${score} de ${questions.length} perguntas!`;
-  
+
       restartButton.classList.remove('hidden');
-  
+
       await salvarResultado();
     }
   
     async function salvarResultado() {
       const idParticipante = localStorage.getItem('id_participante');
+      const nomeParticipante = localStorage.getItem('nome_participante');
   
       if (!idParticipante) {
         console.error('ID do participante não encontrado.');
@@ -92,6 +107,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   
       const { error } = await supabaseClient.from('respostas_quiz').insert({
         id_participante: idParticipante,
+        nome_participante: nomeParticipante,
         pontuacao: score
       });
   
@@ -100,6 +116,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       } else {
         console.log('Pontuação salva com sucesso!');
         localStorage.removeItem('id_participante');
+        localStorage.removeItem('nome_participante');
       }
     }
   
