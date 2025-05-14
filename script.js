@@ -3,12 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const signaturePad = new SignaturePad(canvas);
 
   function redimensionarCanvas() {
-    const ratio = Math.max(window.devicePixelRatio || 1, 1);
-    canvas.width = canvas.offsetWidth * ratio;
-    canvas.height = canvas.offsetHeight * ratio;
-    canvas.getContext('2d').scale(ratio, ratio);
-    signaturePad.clear();
-  }
+  const ratio = Math.max(window.devicePixelRatio || 1, 1);
+  const canvas = document.getElementById('signature-pad');
+
+  const data = signaturePad.toData();
+
+  canvas.width = canvas.offsetWidth * ratio;
+  canvas.height = canvas.offsetHeight * ratio;
+  canvas.getContext('2d').scale(ratio, ratio);
+
+  signaturePad.clear();
+  if (data) signaturePad.fromData(data);
+}
 
   window.addEventListener('resize', redimensionarCanvas);
   redimensionarCanvas();
